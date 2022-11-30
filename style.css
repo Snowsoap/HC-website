@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: linear-gradient(rgb(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(CSS/PIC/LOL11.jpeg);
+    background-size: cover;
+    mix-blend-mode: multiply;
+    height: 100vh;
+    font-family: arial;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 15px 6%;
+}
+
+.logo h1 {
+    color: white;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    width: 300px;
+    padding: 0px;
+    text-decoration: underline;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+nav a:hover {
+    color: #0fa4faee;
+}
+
+/* main  */
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+main h2 {
+    color: #1588cac2;
+    text-transform: uppercase;
+}
+
+main h1 {
+    font-size: 80px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+}
+
+
+main a {
+    color: white;
+}
+
+.buttons {
+    height: 50px;
+    padding-bottom: 20px;
+    justify-content: space-between;
+    width: 500px;
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 5px;
+}
+
+.btn-o {
+    background-color: #1588cac2;
+    color: white;
+    height: 60px;
+    padding-top: 20px;
+    text-decoration: none;
+    width: 200px;
+    border-radius: 20px;
+    border: 2px solid #1588cac2;
+}
+
+.btn-t {
+    text-decoration: none;
+    height: 60px;
+    padding-top: 20px;
+    background: transparent;
+    border: 2px solid #1588cac2;
+    color: white;
+    width: 200px;
+    border-radius: 20px;
+}
+
+.buttons a:hover {
+    background: #0fa4faee;
+    transition: 0.2s;
+    border-color: aliceblue;
+
+}
+
+/* ABOUT SECTION */
+
+.about {
+    height: 200px;
+    background-color: #1588cac2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* cards */
+
+.services {
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.services h2 {
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+.cards {
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #1588cac2;
+    border-radius: 10px;
+    overflow: hidden;
+    min-width: 250px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h4 {
+    color: white;
+}
+
+.card-text {
+    background-color: #1588cac2;
+    padding: 20px;
+}
+
+.card h4 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#mobile {
+    display: none;
+}
+
+.menu label {
+    z-index: 100;
+    color: #fff;
+    display: none;
+}
+
+/* top bar  */
+
+.top-bar {
+    height: 40px;
+    background-color: #1588cac2;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+    z-index: 1000;
+}
+
+.top-bar a {
+    color: white;
+    text-decoration: none;
+}
+
+.info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.social-media a {
+    padding: 0 10px;
+    color: #ffffff;
+}
+
+.social-media a:hover {
+    color: #000;
+    transition: 0.2s;
+    border-color: aliceblue;
+}
+
+.sep {
+    border-left: 1px solid white;
+}
+
+/* media */
+
+@media(max-width:960px) {
+    nav {
+        position: fixed;
+        height: 100vh;
+        width: 350px;
+        top: 80px;
+        right: 0;
+        top: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #4dc09a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.7s;
+    }
+
+    .menu label {
+        display: block;
+    }
+
+    #mobile:checked~nav {
+        top: 40px;
+    }
+
+    nav a {
+        color: #000;
+    }
+
+    nav a:hover {
+        color: yellow;
+    }
+}
+
+@media(max-width:680px) {
+    .top-bar {
+        flex-direction: column;
+        height: 80px;
+        justify-content: space-around;
+    }
+
+    nav {
+        top: 100px;
+        right: 0;
+        top: 100vh;
+    }
+
+    nav a {
+        color: black;
+    }
+
+    nav a:hover {
+        color: yellow;
+    }
+
+    #mobile:checked~nav {
+        top: 58px;
+    }
+
+    .buttons a{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
